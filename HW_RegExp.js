@@ -20,3 +20,5 @@ var result = str.replace(/\$\{([\d\/\*\-\+]+?)\}/g, function(all, match)
 });
 
 console.log(result)
+str.replace(/\$\{([\d\/\*\-\+]+?)\}/g, (_, expr) => new Function(`return ${expr}`)())
+new Function ("return 5")
